@@ -12,6 +12,7 @@ const CreatePost = () => {
               placeholder="Enter your Question based on the Item"
             />
             <input type="file" name="" id="" />
+            <button type="button">Submit</button>
           </div>
         </div>
       </center>

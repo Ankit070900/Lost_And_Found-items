@@ -4,9 +4,9 @@ const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary ">
       <div className="container-fluid " style={{ width: "85%" }}>
-        <a className="navbar-brand text" href="#">
-          Lost<span className="and">&</span>Found
-        </a>
+        <Link className="navbar-brand text" to="/">
+          Lost&Found
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -24,7 +24,7 @@ const Header = () => {
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav_item">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/home">
+              <Link className="nav-link active" aria-current="page" to="/">
                 Home
               </Link>
             </li>
