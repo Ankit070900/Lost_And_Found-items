@@ -1,4 +1,11 @@
+import { useDispatch } from "react-redux";
+
 const CreatePost = () => {
+  const dispatch = useDispatch();
+  const handleAddPost = () => {
+    dispatch(postActions.post);
+  };
+
   return (
     <>
       <center className="container">
@@ -12,7 +19,9 @@ const CreatePost = () => {
               placeholder="Enter your Question based on the Item"
             />
             <input type="file" name="" id="" />
-            <button type="button">Submit</button>
+            <button type="button" onClick={handleAddPost}>
+              Submit
+            </button>
           </div>
         </div>
       </center>
