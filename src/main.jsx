@@ -7,6 +7,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainPage from "./routes/MainPage.jsx";
 import FoundItem from "./routes/FoundItem.jsx";
 import { Provider } from "react-redux";
+import lostStore from "./Store/Index.js";
+import MyList from "./Components/MyList.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +17,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <MainPage /> },
       { path: "/Found", element: <FoundItem /> },
+      { path: "/Mylist", element: <MyList /> },
     ],
   },
 ]);
