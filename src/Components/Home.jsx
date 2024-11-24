@@ -1,3 +1,5 @@
+import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
@@ -12,10 +14,11 @@ const Home = () => {
       </div>
       <div className="lost">
         <div className="lost-img">
-          <img src="images\front.jpg" alt="" />
+          <img src="images\lost-2.svg" alt="" width={600} />
         </div>
-        <div className="heading">
+        <div className="headings">
           <h1>Lost Product</h1>
+          <hr></hr>
           <h4>
             Creating a "Lost and Found Product" website involves setting up two
             main sections: Lost and Found. For the "Lost" page, you can design
@@ -23,6 +26,11 @@ const Home = () => {
             search for them. Here's a detailed guide for structuring the Lost
             page:
           </h4>
+          <Link to="/Found">
+            <button type="button" class="btn btn-outline-info button">
+              <FaArrowRightLong />
+            </button>
+          </Link>
         </div>
       </div>
     </>
