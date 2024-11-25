@@ -33,6 +33,25 @@ const Home = () => {
           </Link>
         </div>
       </div>
+      <div className="lost">
+        <div className="headings">
+          <h1>List items</h1>
+          <hr></hr>
+          <h4>
+            To create a List Page for a Lost and Found Product website, you
+            would design a front-end page displaying all the items reported as
+            lost or found. Here's how you can structure and implement it:
+          </h4>
+          <Link to="/Mylist">
+            <button type="button" class="btn btn-outline-info button">
+              <FaArrowRightLong />
+            </button>
+          </Link>
+        </div>
+        <div className="lost-img">
+          <img src="images\list-item.svg" alt="" width={600} />
+        </div>
+      </div>
     </>
   );
 };

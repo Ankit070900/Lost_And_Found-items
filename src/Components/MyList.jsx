@@ -1,4 +1,7 @@
 const MyList = () => {
+  const items = {
+    image: "imagesphone.webp",
+  };
   return (
     <div className="my_card">
       <div class="card cards" style={{ width: "25rem" }}>

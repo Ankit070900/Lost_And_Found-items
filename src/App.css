@@ -82,8 +82,8 @@
   width: 180px;
 }
 .lost {
-  margin: 70px 40px;
-  padding-top: 35px;
+  margin: 0px 40px;
+  padding-top: 10px;
   display: flex;
   justify-content: space-evenly;
 }
