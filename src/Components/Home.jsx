@@ -27,7 +27,7 @@ const Home = () => {
             page:
           </h4>
           <Link to="/Found">
-            <button type="button" class="btn btn-outline-info button">
+            <button type="button" className="btn btn-outline-info button">
               <FaArrowRightLong />
             </button>
           </Link>
@@ -43,7 +43,7 @@ const Home = () => {
             lost or found. Here's how you can structure and implement it:
           </h4>
           <Link to="/Mylist">
-            <button type="button" class="btn btn-outline-info button">
+            <button type="button" className="btn btn-outline-info button">
               <FaArrowRightLong />
             </button>
           </Link>

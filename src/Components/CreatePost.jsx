@@ -1,11 +1,6 @@
 import { useDispatch } from "react-redux";
 
 const CreatePost = () => {
-  const dispatch = useDispatch();
-  const handleAddPost = () => {
-    dispatch(postActions.post);
-  };
-
   return (
     <center className="container">
       <div className="search_heading">
@@ -27,7 +22,7 @@ const CreatePost = () => {
             </select>
           </label>
           <input type="file" name="" id="" required />
-          <button type="button" class="btn btn-success btn_submit">
+          <button type="button" className="btn btn-success btn_submit">
             Success
           </button>
         </div>

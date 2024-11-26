@@ -6,11 +6,11 @@ import { Outlet } from "react-router";
 
 function App() {
   return (
-    <>
+    <ItemListProvider>
       <Header />
       <Outlet />
       <Footer />
-    </>
+    </ItemListProvider>
   );
 }
 
