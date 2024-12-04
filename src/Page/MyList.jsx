@@ -4,7 +4,7 @@ import Post from "./Post";
 
 const MyList = () => {
   const { itemList } = useContext(ItemList);
-
+  console.log(itemList);
   return (
     <>
       {itemList.map((items) => (

@@ -1,4 +1,12 @@
 const Post = ({ items }) => {
+  // const items = {
+  //   image: "images/phone.webp",
+  //   Item_name: "Redmi 5",
+  //   Description: "If you lose an Android device or Wear OS watch, you can find",
+  //   Question: "My redmi 5 back side 2 scketh",
+  //   Types: "Lost",
+  // };
+  console.log(items);
   return (
     <div className="my_card">
       <div className="card cards" style={{ width: "25rem" }}>
