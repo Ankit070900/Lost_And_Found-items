@@ -6,14 +6,15 @@ export const ItemList = createContext({
   deleteItem: () => {},
 });
 
-const itemListReducer = (currItemList, action) => {};
+const itemListReducer = (currItemList, action) => {
+  return currItemList;
+};
 
 const ItemListProvider = ({ children }) => {
   const [itemList, dispatchItemList] = useReducer(
     itemListReducer,
     DEFAULT_ITEM
   );
-
   const addItem = () => {};
 
   const deleteItem = () => {};
