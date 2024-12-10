@@ -1,5 +1,5 @@
 import { useContext, useRef } from "react";
-import { ItemList } from "../Store/Post list Store";
+import { ItemList } from "../Store/Post-list-Store";
 
 const CreatePost = () => {
   const { addItem } = useContext(ItemList);
@@ -10,7 +10,14 @@ const CreatePost = () => {
   const itemImageElement = useRef();
 
   const handleSubmit = (event) => {
-    event.preventefault();
+    event.preventDefault();
+    const itemName = itemNameElement.current.value;
+    const description = descriptionElement.current.value;
+    const question = questionElement.current.value;
+    const itemType = itemTypeElement.current.value;
+    const itemImage = itemImageElement.current.value;
+
+    addItem(itemName, description, question, itemType, itemImage);
   };
 
   return (
@@ -51,7 +58,7 @@ const CreatePost = () => {
           </label>
           <input ref={itemImageElement} type="file" name="" id="" required />
           <button type="submit" className="btn btn-success btn_submit">
-            Success
+            Post
           </button>
         </div>
       </div>

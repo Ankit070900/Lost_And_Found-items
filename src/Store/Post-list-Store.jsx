@@ -15,11 +15,16 @@ const ItemListProvider = ({ children }) => {
     itemListReducer,
     DEFAULT_ITEM
   );
-  const addItem = () => {};
+  console.log(itemList);
+  const addItem = (itemName, description, question, itemImage, itemType) => {
+    console.log(
+      `${itemName} ${description} ${question} ${itemImage} ${itemType}`
+    );
+  };
 
   const deleteItem = () => {};
   return (
-    <ItemList.Provider value={(itemList, addItem, deleteItem)}>
+    <ItemList.Provider value={{ itemList, addItem, deleteItem }}>
       {children}
     </ItemList.Provider>
   );

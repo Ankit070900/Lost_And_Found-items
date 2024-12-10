@@ -1,18 +1,18 @@
-const Post = ({ items }) => {
+const Post = ({ item }) => {
   return (
     <div className="my_card">
       <div className="card cards" style={{ width: "25rem" }}>
-        <img src={items.image} className="card-img-top image" alt="..." />
+        <img src={item.image} className="card-img-top image" alt="..." />
         <div className="card-body">
-          <h5 className="card-title">Item name: {items.Item_name}</h5>
+          <h5 className="card-title">Item name: {item.Item_name}</h5>
           <span className="card-text">
-            <h6> Description:</h6> {items.Description}
+            <h6> Description:</h6> {item.Description}
           </span>
           <span className="card-text">
             <h6>Question: </h6>
-            {items.Question}
+            {item.Question}
           </span>
-          <h5>Type: {items.Types}</h5>
+          <h5>Type: {item.Types}</h5>
         </div>
       </div>
     </div>
