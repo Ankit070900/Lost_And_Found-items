@@ -7,7 +7,11 @@ export const ItemList = createContext({
 });
 
 const itemListReducer = (currItemList, action) => {
-  return currItemList;
+  let newItemList = currItemList;
+  if (action.type === "ADD_POST") {
+    newItemList = [action.payload, ...currItemList];
+  }
+  return newItemList;
 };
 
 const ItemListProvider = ({ children }) => {
@@ -15,11 +19,18 @@ const ItemListProvider = ({ children }) => {
     itemListReducer,
     DEFAULT_ITEM
   );
-  console.log(itemList);
-  const addItem = (itemName, description, question, itemImage, itemType) => {
-    console.log(
-      `${itemName} ${description} ${question} ${itemImage} ${itemType}`
-    );
+  const addItem = (itemName, description, question, itemType, itemImage) => {
+    dispatchItemList({
+      type: "ADD_POST",
+      payload: {
+        id: Date.now(),
+        Item_name: itemName,
+        Description: description,
+        Question: question,
+        Types: itemType,
+        image: itemImage,
+      },
+    });
   };
 
   const deleteItem = () => {};
@@ -41,6 +52,14 @@ const DEFAULT_ITEM = [
   },
   {
     id: "02",
+    image: "images/lost-2.svg",
+    Item_name: "hello",
+    Description: "If you lose an Android device or Wear OS watch, you can find",
+    Question: "My redmi 5 back side 2 scketh",
+    Types: "Found",
+  },
+  {
+    id: "03",
     image: "images/lost-2.svg",
     Item_name: "hello",
     Description: "If you lose an Android device or Wear OS watch, you can find",

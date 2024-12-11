@@ -43,23 +43,28 @@ const CreatePost = () => {
             required
             placeholder="Enter your Question based on the Item"
           />
-          <label
-            htmlFor="item"
-            ref={itemTypeElement}
-            className="choose"
-            required
-          >
+          <label htmlFor="item" className="choose" required>
             Choose a type :
             <select name="item" className="choose_item" required>
               <option value="Select">Select</option>
-              <option value="Lost">Lost</option>
-              <option value="Found">Found</option>
+              <option ref={itemTypeElement} value="Lost">
+                Lost
+              </option>
+              <option ref={itemTypeElement} value="Found">
+                Found
+              </option>
             </select>
           </label>
           <input ref={itemImageElement} type="file" name="" id="" required />
-          <button type="submit" className="btn btn-success btn_submit">
+          {/* <Link> */}
+          <button
+            // to="/Mylist"
+            type="submit"
+            className="btn btn-success btn_submit"
+          >
             Post
           </button>
+          {/* </Link> */}
         </div>
       </div>
     </form>

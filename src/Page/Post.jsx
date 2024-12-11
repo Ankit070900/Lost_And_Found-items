@@ -1,4 +1,5 @@
 const Post = ({ item }) => {
+  // console.log(item);
   return (
     <div className="my_card">
       <div className="card cards" style={{ width: "25rem" }}>
