@@ -1,7 +1,14 @@
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { ItemList } from "../Store/Post-list-Store";
+import axios from "axios";
 
 const CreatePost = () => {
+  const [image, setImage] = useState("");
+  const handleImage = (e) => {
+    console.log(e.target.files);
+    setImage(e.target.files[0]);
+  };
+
   const { addItem } = useContext(ItemList);
   const itemNameElement = useRef();
   const descriptionElement = useRef();
@@ -19,6 +26,14 @@ const CreatePost = () => {
 
     addItem(itemName, description, question, itemType, itemImage);
   };
+
+  // const handleImage = () => {
+  //   const formData = new FormData();
+  //   formData.append("iItemImage", itemImage);
+  //   axios.post(url, formData).then((res) => {
+  //     console.log(res);
+  //   });
+  // };
 
   return (
     <form className="container" onSubmit={handleSubmit}>
@@ -55,16 +70,17 @@ const CreatePost = () => {
               </option>
             </select>
           </label>
-          <input ref={itemImageElement} type="file" name="" id="" required />
-          {/* <Link> */}
-          <button
-            // to="/Mylist"
-            type="submit"
-            className="btn btn-success btn_submit"
-          >
+          <input
+            ref={itemImageElement}
+            type="file"
+            name=""
+            id=""
+            required
+            onClick={handleImage}
+          />
+          <button type="submit" className="btn btn-success btn_submit">
             Post
           </button>
-          {/* </Link> */}
         </div>
       </div>
     </form>

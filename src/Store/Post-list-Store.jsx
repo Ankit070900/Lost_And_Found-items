@@ -52,7 +52,7 @@ const DEFAULT_ITEM = [
   },
   {
     id: "02",
-    image: "images/lost-2.svg",
+    image: "images/phone.webp",
     Item_name: "hello",
     Description: "If you lose an Android device or Wear OS watch, you can find",
     Question: "My redmi 5 back side 2 scketh",
@@ -60,7 +60,15 @@ const DEFAULT_ITEM = [
   },
   {
     id: "03",
-    image: "images/lost-2.svg",
+    image: "images/phone.webp",
+    Item_name: "hello",
+    Description: "If you lose an Android device or Wear OS watch, you can find",
+    Question: "My redmi 5 back side 2 scketh",
+    Types: "Found",
+  },
+  {
+    id: "04",
+    image: "images/phone.webp",
     Item_name: "hello",
     Description: "If you lose an Android device or Wear OS watch, you can find",
     Question: "My redmi 5 back side 2 scketh",
