@@ -1,6 +1,5 @@
 import { useContext, useRef, useState } from "react";
 import { ItemList } from "../Store/Post-list-Store";
-import axios from "axios";
 
 const CreatePost = () => {
   const [image, setImage] = useState("");
@@ -24,16 +23,22 @@ const CreatePost = () => {
     const itemType = itemTypeElement.current.value;
     const itemImage = itemImageElement.current.value;
 
+    itemNameElement.current.value = "";
+    descriptionElement.current.value = "";
+    questionElement.current.value = "";
+    itemTypeElement.current.value = "";
+    itemImageElement.current.value = "";
+
     addItem(itemName, description, question, itemType, itemImage);
   };
 
-  // const handleImage = () => {
-  //   const formData = new FormData();
-  //   formData.append("iItemImage", itemImage);
-  //   axios.post(url, formData).then((res) => {
-  //     console.log(res);
-  //   });
-  // };
+  const handleApi = () => {
+    const formData = new FormData();
+    formData.append("iItemImage", itemImage);
+    axios.post(url, formData).then((res) => {
+      console.log(res);
+    });
+  };
 
   return (
     <form className="container" onSubmit={handleSubmit}>
@@ -60,7 +65,12 @@ const CreatePost = () => {
           />
           <label htmlFor="item" className="choose" required>
             Choose a type :
-            <select name="item" className="choose_item" required>
+            <select
+              name="item"
+              ref={itemTypeElement}
+              className="choose_item"
+              required
+            >
               <option value="Select">Select</option>
               <option ref={itemTypeElement} value="Lost">
                 Lost
@@ -78,7 +88,12 @@ const CreatePost = () => {
             required
             onClick={handleImage}
           />
-          <button type="submit" className="btn btn-success btn_submit">
+
+          <button
+            type="submit"
+            onClick={handleApi}
+            className="btn btn-success btn_submit"
+          >
             Post
           </button>
         </div>
