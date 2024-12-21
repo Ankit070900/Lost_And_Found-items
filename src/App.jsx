@@ -7,6 +7,9 @@ import Home from "./Page/Home";
 import CreatePost from "./Page/CreatePost";
 import MyList from "./Page/MyList";
 import ItemListProvider from "./Store/Post-list-Store";
+import LoginSignUp from "./Page/LoginSignUp";
+import SignUp from "./Page/SignUp";
+import Login from "./Page/Login";
 
 function App() {
   return (
@@ -16,6 +19,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Found" element={<CreatePost />} />
         <Route path="/Mylist" element={<MyList />} />
+        <Route path="/loginsign" element={<LoginSignUp />}></Route>
+
+        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </ItemListProvider>

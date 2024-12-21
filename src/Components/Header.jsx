@@ -43,10 +43,11 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-
-          <button className="btn btn-outline-success" type="submit">
-            Login
-          </button>
+          <Link to="/loginsign">
+            <button className="btn btn-outline-success" type="submit">
+              Login
+            </button>
+          </Link>
         </div>
       </div>
     </nav>

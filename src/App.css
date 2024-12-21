@@ -102,6 +102,7 @@
   width: 210px;
   line-height: 28px;
   margin-top: 8px;
+  text-align: center;
 }
 
 .lost {
@@ -129,4 +130,20 @@
   font-size: 20px;
   font-weight: 800;
   margin-left: 45%;
+}
+
+.bodys {
+  border: 2px solid red;
+}
+.sign-btn button {
+  border: none;
+  color: rgb(8, 8, 8);
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign_form {
+  display: flex;
+  flex-direction: column;
 }
