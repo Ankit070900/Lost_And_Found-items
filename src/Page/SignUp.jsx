@@ -1,14 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
-    <div className="sign-btn">
-      <button>Sign Up</button>
-      <div className="sign_form">
-        <input type="text" />
-        <input type="text" />
-        <input type="text" />
-      </div>
+    <div className="form">
+      <h2>Sign Up</h2>
     </div>
   );
 };
