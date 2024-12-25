@@ -19,10 +19,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Found" element={<CreatePost />} />
         <Route path="/Mylist" element={<MyList />} />
-        <Route path="/loginsign" element={<LoginSignUp />}></Route>
-
+        <Route path="/loginsign" element={<LoginSignUp />} />
+        {/* 
         <Route path="/signUp" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login />} /> */}
       </Routes>
       <Footer />
     </ItemListProvider>
