@@ -4,7 +4,7 @@ import { ItemList } from "../Store/Post-list-Store";
 const CreatePost = () => {
   const [image, setImage] = useState("");
   const handleImage = (e) => {
-    console.log(e.target.files);
+    // console.log(e.target.files);
     setImage(e.target.files[0]);
   };
 
